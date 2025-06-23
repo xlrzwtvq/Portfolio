@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amit Kumar | Portfolio & Projects</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -29,11 +30,18 @@
 
       <div class="project-grid">
 
-        <div class="project-card">
+        <!-- <div class="project-card">
           <img src="Images/project-sample.png" alt="Project 1 preview">
           <h3>Project One</h3>
           <p>This is a placeholder project. Later, you’ll link real ones here.</p>
           <a href="#">View Project</a>
+        </div> -->
+
+        <div class="project-card">
+          <img src="Images/project2.jpeg" alt="Portfolio Landing Page preview">
+          <h3>Responsive Portfolio site</h3>
+          <p>A mobile-friendly personal site built with HTML, CSS, and Flexbox. Deployed via GitHub Pages.</p>
+          <a href="https://github.com/xlrzwtvq/Project-01_PersonalSite" target="_blank">View on GitHub</a>
         </div>
 
         <div class="project-card">
@@ -53,6 +61,26 @@
       </div>
     </section>
 
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>Responsive Design</li>
+        <li>Version Control (Git & GitHub)</li>
+        <li>Technical Troubleshooting</li>
+        <li>Live Deployment (GitHub Pages)</li>
+      </ul>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-preview">
+        <h3>Coming Soon</h3>
+        <p>I’m working on writing about what I learn and build — stay tuned for updates.</p>
+        <p><em>Planned topics:</em> HTML, CSS tricks, GitHub workflows, and emotional resilience in tech.</p>
+      </div>
+    </section>
+
     <section id="contact">
       <h2>Contact Me</h2>
       <form>
@@ -67,8 +95,33 @@
 
         <button type="submit">Send</button>
       </form>
-      <p>Form coming tomorrow.</p>
+    </section>
+
+    <section id="calculator">
+      <h2>Simple Calculator</h2>
+      <input type="number" id="num1" placeholder="Enter first number" />
+      <input type="number" id="num2" placeholder="Enter second number" />
+
+      <div style="margin-top: 10px;">
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('subtract')">Subtract</button>
+        <button onclick="calculate('multiply')">Multiply</button>
+        <button onclick="calculate('divide')">Divide</button>
+      </div>
+
+      <p id="calcResult" style="margin-top: 15px; font-weight: bold;"></p>
     </section>
   </main>
+
+  <script>
+    // console.log("Hello, Amit");
+  </script>
+
+  <script src="script.js"></script>
+
+  <h2>Guess the City</h2>
+  <input type="text" id="cityInput" placeholder="Enter a city name" />
+  <button onclick="checkCity()">Submit</button>
+  <p id="result"></p>
 </body>
 </html>

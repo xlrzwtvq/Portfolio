@@ -2,4 +2,6 @@
 node_modules/
 .env
 *.log
-
+css-tests1/
+css-tests2/
+default/
