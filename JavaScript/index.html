@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="guess_city">
+        <h2>Guess the City</h2>
+        <input type="text" id="cityInput" placeholder="Enter the city name">
+        <button onclick="checkCity()">Submit</button>
+        <p id="result"></p>
+    </section>
+
+    <section id="calculator">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <div style="margin-top: 10px;">
+            <button onclick="calculate('add')">Add</button>
+            <button onclick="calculate('subtract')">Subtract</button>
+            <button onclick="calculate('multiply')">Multiply</button>
+            <button onclick="calculate('divide')">Divide</button>
+        </div>
+
+        <p id="calcResult" style="margin-top: 15px; font-weight: bold;"></p>
+    </section>
+
+    <script>
+
+        // Greet message
+
+        function greet() {
+            console.log("Hello, Amit!");
+        }
+        
+        greet();
+
+        function welcome(name) {
+            console.log("Hello, " +name+ "!");
+        }
+        
+        welcome("Natasha");
+
+
+        // Customer message based on sport
+
+        function favoriteSportMessage (sport) {
+            if (sport === "tennis"){
+                console.log ("You love tennis - just like Federer!");
+            } else if (sport === "table tennis") {
+                console.log ("Fast reflexes! Table Tennis is awesome.");
+            } else {
+                console.log ("Nice! "+ sport +" is a cool sport too.");
+            }
+        }
+        
+        favoriteSportMessage ("tennis");
+
+
+        // Simple calculator 1
+
+        function calculate (a, b, operator) {
+            if (operator === "add"){
+                return a+b;
+            } else if (operator === "subtract") {
+                return a-b;
+            } else if (operator === "multiply") {
+                return a*b;
+            } else if (operator === "divide") {
+                return a/b;
+            }
+        }
+
+        console.log (calculate (2, 8, "add"));
+        console.log (calculate (2, 8, "subtract"));
+        console.log (calculate (2, 8, "multiply"));
+        console.log (calculate (2, 8, "divide"));
+
+
+        // Mini quiz
+
+        function quiz (answer) {
+            if (answer.toLowerCase () === "delhi") {
+                console.log ("Correct! Delhi is the capital of India.");
+            } else {
+                console.log ("Oops! Try again.");
+            }
+        }
+
+        quiz ("Delhi");
+
+
+        // Check city visual example
+
+        function checkCity () { //Tab is not working to move the cursor from the textbox to the submit button, and just hitting enter after entering the value in the text box doesn't submit the form automatically
+            const input = document.getElementById("cityInput").value;
+            const result = document.getElementById("result");
+
+            if(input.toLowerCase() === "delhi") {
+                result.textContent = "✅ Correct! Welcome to Delhi.";
+            } else {
+                result.textContent = "❌ Try again!";
+            }
+        }
+
+        // Simple calculator 2
+
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const resultDisplay = document.getElementById("calcResult");
+
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultDisplay.textContent = "Please enter valid numbers!";
+                return;
+            }
+
+            switch (operation) {
+                case "add":
+                    result = num1 + num2;
+                    break;
+                case "subtract":
+                    result = num1 - num2;
+                    break;
+                case "multiply":
+                    result = num1 * num2;
+                    break;
+                case "divide":
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            resultDisplay.textContent = `Result: ${result}`;
+        }
+
+    </script>
+</body>
+</html>

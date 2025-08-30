@@ -1,5 +1,4 @@
-# Project 01 - Personal Website
-
+# Portfolio
 This is Amit's personal webpage built using HTML and CSS.
 
 ## Features

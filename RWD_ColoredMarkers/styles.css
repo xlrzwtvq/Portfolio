@@ -1,0 +1,123 @@
+h1 {
+    text-align: center;
+    /* background-color: rgb(0, 255, 255); */
+    /* Repeated: Cyan */
+}
+
+.marker {
+    /* background-color: red; */
+
+    height: 25px;
+    width: 200px;
+    /* margin: auto; */
+    margin: 10px auto;
+}
+
+/* .one { */
+.red {
+    /* background-color: red; */
+    /* Red color keyword */
+
+    /* background-color: rgb(255, 0, 0); */
+    /* Red color via RGB function */
+
+    /* background-color: rgb(255, 255, 0); */
+    /* Yellow, first secondary color, combine pure red + pure green */
+
+    /* background-color: rgb(255, 127, 0); */
+    /* Orange, first tertiary color, red at max and green at 127, combine red + yellow */
+
+    /* background-color: rgb(127, 255, 0); */
+    /* Chartreuse green, fourth tertiary color, red at 127 and green at max, combine green + yellow */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Black */
+
+    /* background-color: rgb(255, 0, 0); */
+    /* Red */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Black */
+
+    /* background-color: rgb(255, 0, 0); */
+    /* Red */
+
+    background: rgb(255, 0, 0);
+    /* Red, Property changed from 'background-color' to 'background' */
+}
+
+/* .two { */
+.green {
+    /* background-color: green; */
+    /* Green color keyword is a darker shade */
+
+    /* background-color: rgb(0, 255, 0); */
+    /* This green shade is a much lighter shade */
+
+    /* background-color: rgb(0, 127, 0); */
+    /* Creates the green color with a darker shade */
+
+    /* background-color: rgb(0, 255, 0); */
+    /* Repeated: Green (lighter shade) */
+
+    /* background-color: rgb(0, 255, 255); */
+    /* Cyan, second secondary color, combine pure green + pure blue */
+
+    /* background-color: rgb(0, 255, 127); */
+    /* Spring green, second tertiary color, green at max and blue at 127, combine cyan + green */
+
+    /* background-color: rgb(0, 127, 255); */
+    /* Azure, fifth tertiary color, green at 127 and blue at max, combine blue + cyan */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Black */
+
+    /* background-color: rgb(0, 255, 255); */
+    /* Repeated: Cyan */
+
+    /* background-color: rgb(255, 0, 0); */
+    /* Red */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Black */
+
+    /* background-color: #00FF00; */
+    /* Green via Hex code */
+
+    background-color: #007F00;
+    /* Lower intensity Green via '7F' in Hex code */
+}
+
+/* .three { */
+.blue {
+    /* background-color: blue; */
+    /* Blue color keyword */
+
+    /* background-color: rgb(0, 0, 255); */
+    /* Blue color via RGB function */
+
+    /* background-color: rgb(255, 0, 255); */
+    /* Magenta, third secondary color, combine pure blue + pure red */
+
+    /* background-color: rgb(127, 0, 255); */
+    /* Violet, third tertiary color, blue at max and red at 127, combine magenta + blue */
+
+    /* background-color: rgb(255, 0, 127); */
+    /* Rose or bright pink, sixth tertiary color, blue at 127 and red at max, combine red + magenta */
+
+    /* background-color: rgb(0, 0, 0); */
+    /* Black */
+
+    background-color: hsl(240, 100%, 50%);
+    /* 
+    Hue (number from 0 to 360, red at 0, green at 120, blue at 240)
+    Saturation: intensity of the color (percentage from 0% to 100%, 0% or gray, 100% or pure color)
+    Lightness: how brigh the color appears (percentage from 0% to 100%, 0% or complete black, 100% complete white, 50% being neutral)
+    */
+}
+
+.container {
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
