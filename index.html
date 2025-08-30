@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="/Images/IMG6.jpg" alt="Amit's profile photo">
-            <p>Hi, I'm Amit. I'm learning to build websites through hands-on projects. I love table tennis, tech, and self-improvement.</p>
-        </section>
-        <section id="projects">
-            <h2>My Projects</h2>
-            <!-- <p>Projects will go here soon!</p> -->
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="/Images/Project19.AVIF" alt="Project 1 preview">
-                    <h3>Project 1</h3>
-                    <p>This is a placeholder project. Later, you'll link rel ones here.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="/Images/Project18.JPG" alt="Project 2 preview">
-                    <h3>Project 2</h3>
-                    <p>Another sample project card to showcase your work.</p>
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <!-- <p>Form coming tomorrow.</p> -->
-            <form id="myForm">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="message">Message:</label><br>
-                <textarea name="message" id="message" rows="4" required></textarea><br><br>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>Responsive Design</li>
-                <li>Version Control (Git & GitHub)</li>
-                <li>Technical Troubleshooting</li>
-                <li>Llive Deployment (GitHub Pages)</li>
-            </ul>
-        </section>
-        <section id="blog">
-            <h2>Blog</h2>
-            <div class="blog-preview">
-                <h3>Coming Soon</h3>
-                <p>I'm working on writing about what I learn and build - stay tuned for updates.</p>
-                <p><em>Planned topics:</em> HTML, CSS tricks, GitHub workflows, and emotional resilience in tech.</p>
-            </div>
-        </section>
-    </main>
-    <script>
-        const form = document.getElementById('myForm');
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
 
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            const response = await fetch('https://script.google.com/macros/s/AKfycbw0f7_wmWWMfZSPA9j3lOY-ZWGWEldjyz0II-jR76DOUyEY01zOItOR_eJkB9JbN6w1BA/exec', {
-            method: 'POST',
-            body: formData
-            // 👈 No need to set headers; browser sets them for FormData
-            });
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="Images/IMG6.jpg" alt="Amit's profile photo">
+      <p>Hi, I'm Amit. I'm learning to build websites through hands-on projects. I love table tennis, tech, and self-improvement.</p>
+    </section>
 
-            const result = await response.text();
-            alert('Form submitted: ' + result);
-            form.reset();
-        });
-    </script>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="Images/Project19.AVIF" alt="Project 1 preview">
+          <h3>Project 1</h3>
+          <p>This is a placeholder project. Later, you'll link real ones here.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div class="project-card">
+          <img src="Images/Project18.JPG" alt="Project 2 preview">
+          <h3>Project 2</h3>
+          <p>Another sample project card to showcase your work.</p>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ Contact Section using FormSubmit -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formsubmit.co/your@email.com" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" rows="4" required></textarea><br><br>
+
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://xlrzwtvq.github.io/#contact">
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>Responsive Design</li>
+        <li>Version Control (Git & GitHub)</li>
+        <li>Technical Troubleshooting</li>
+        <li>Live Deployment (GitHub Pages)</li>
+      </ul>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="blog-preview">
+        <h3>Coming Soon</h3>
+        <p>I'm working on writing about what I learn and build - stay tuned for updates.</p>
+        <p><em>Planned topics:</em> HTML, CSS tricks, GitHub workflows, and emotional resilience in tech.</p>
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
