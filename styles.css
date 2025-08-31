@@ -41,6 +41,41 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* 🔥 Hamburger menu styles */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Keep nav horizontal on big screens */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+}
+
 /* Form styling */
 form input,
 form textarea {
@@ -78,13 +113,12 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-/* .project-card img {
-  max-width: 100px;
-  border-radius: 4px;
-} */
 .project-card img {
+  /* width: 100%; */
   width: 100px;
+  /* height: auto; */
   height: 100px;
+  /* max-width: 100px; */
   object-fit: cover;
   border-radius: 4px;
 }
@@ -139,7 +173,7 @@ form button:hover {
   border-radius: 8px;
 }
 
-/* Skills styling */
+/* Skills section styling */
 #skills {
   margin-top: 40px;
 }
@@ -148,7 +182,7 @@ form button:hover {
   line-height: 1.8;
 }
 
-/* Blog styliing */
+/* Blog section styling */
 #blog {
   margin-top: 60px;
   padding: 30px 20px;
