@@ -78,8 +78,14 @@ form button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
-.project-card img {
+/* .project-card img {
   max-width: 100px;
+  border-radius: 4px;
+} */
+.project-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 4px;
 }
 .project-card h3 {
