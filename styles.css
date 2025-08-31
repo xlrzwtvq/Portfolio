@@ -41,41 +41,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* 🔥 Hamburger menu styles */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-}
-
-/* Keep nav horizontal on big screens */
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  #nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #fdfdfd;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 10px;
-  }
-
-  #nav-links.active {
-    display: flex;
-  }
-}
-
 /* Form styling */
 form input,
 form textarea {
@@ -153,11 +118,11 @@ form button:hover {
     padding: 10px;
   }
 
-  /* nav ul {
+  nav ul {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-  } */
+  }
 
   .project-card h3 {
     font-size: 1rem;
