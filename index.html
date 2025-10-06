@@ -1,16 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amit's Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Amit Kumar — Portfolio</title>
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Amit Kumar - portfolio: about, projects, contact, skills, and blog. Built with HTML, CSS & JavaScript.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Script loaded with defer -->
+  <script src="script.js" defer></script>
 </head>
 <body>
 
+  <!-- Skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
-    <!-- Navigation Bar -->
-    <nav>
+    <!-- Hamburger / menu toggle -->
+    <button id="menu-toggle"
+            class="hamburger"
+            aria-controls="site-nav"
+            aria-expanded="false"
+            aria-label="Open menu">
+      ☰
+    </button>
+
+    <!-- Navigation drawer (hidden by default to AT) -->
+    <nav id="site-nav" role="navigation" aria-label="Main menu" aria-hidden="true">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -21,31 +42,36 @@
     </nav>
   </header>
 
-  <main>
+  <!-- backdrop -->
+  <div id="backdrop" role="presentation" aria-hidden="true"></div>
 
-    <!-- About Section -->
+  <!-- Main content -->
+  <main id="main">
+
+    <!-- About section -->
     <section id="about">
       <h2>About Me</h2>
-      <img src="Images/IMG6.jpg" alt="Amit's profile photo">
+      <img src="/Images/IMG6.jpg" alt="Amit's profile photo">
       <p>Hi, I'm Amit. I'm learning to build websites through hands-on projects. I love table tennis, tech, and self-improvement.</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects section -->
     <section id="projects">
       <h2>My Projects</h2>
       <div class="project-grid">
-        <div class="project-card">
+        <article class="project-card">
           <img src="Images/running-cats.jpg" alt="Project 1 preview">
           <h3>Cat Photo App</h3>
-          <p>'Responsive Web Design' course project</p>
-          <a href="https://xlrzwtvq.github.io/Portfolio/RWD/RWD_CatPhotoApp/index.html" target="_blank">View Project</a>
-        </div>
-        <div class="project-card">
+          <p>RWD course project 1</p>
+          <a href="https://xlrzwtvq.github.io/Portfolio/RWD/RWD_CatPhotoApp/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+
+        <article class="project-card">
           <img src="Images/beans.jpg" alt="Project 2 preview">
           <h3>Cafe Menu</h3>
-          <p>'Responsive Web Design' course project</p>
-          <a href="https://xlrzwtvq.github.io/Portfolio/RWD/RWD_CafeMenu/index.html" target="_blank">View Project</a>
-        </div>
+          <p>RWD course project 2</p>
+          <a href="https://xlrzwtvq.github.io/Portfolio/RWD/RWD_CafeMenu/index.html" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
       </div>
     </section>
 
@@ -53,49 +79,53 @@
     <section id="contact">
       <h2>Contact Me</h2>
       <form action="https://formsubmit.co/kumar.amit%40icloud.com" method="POST">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
 
-        <label for="message">Message:</label><br>
-        <textarea name="message" id="message" rows="4" required></textarea><br><br>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_captcha" value="true">
+        <!-- Anti-spam & formsubmit settings -->
+        <input name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://xlrzwtvq.github.io/Portfolio/thanks.html">
 
         <button type="submit">Send</button>
       </form>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills section -->
     <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>HTML & CSS</li>
+        <li>HTML &amp; CSS</li>
         <li>Responsive Design</li>
-        <li>Version Control (Git & GitHub)</li>
+        <li>Version Control (Git &amp; GitHub)</li>
         <li>Technical Troubleshooting</li>
         <li>Live Deployment (GitHub Pages)</li>
       </ul>
     </section>
 
-    <!-- Blog Section -->
+    <!-- Blog section -->
     <section id="blog">
       <h2>Blog</h2>
-      <div class="blog-preview">
-        <h3>Coming Soon</h3>
-        <p>I'm working on writing about what I learn and build - stay tuned for updates.</p>
-        <p><em>Planned topics:</em> HTML, CSS tricks, GitHub workflows, and emotional resilience in tech.</p>
-      </div>
+      <h3>Coming Soon</h3>
+      <p>I'm working on writing about what I learn and build — stay tuned for updates.</p>
+      <p><em>Planned topics:</em> HTML, CSS tricks, GitHub workflows, and emotional resilience in tech.</p>
     </section>
-
   </main>
 
-  <!-- Link to JavaScript file -->
-  <script src="script.js"></script>
+  <!-- Footer section -->
+  <footer>
+    <p>© 2025 Amit Kumar</p>
+    <p id="lastUpdated" class="last-updated">Last updated: —</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backtotop" class="backtotop" type="button" aria-label="Back to top">⬆️</button>
 
 </body>
 </html>
